@@ -5,17 +5,6 @@ import ListaSuspensa from "../ListaSuspensa";
 import "./Formulario.css";
 
 const Formulario = (props) => {
-  const times = [
-    'Programação',
-    'Front-End',
-    'Data Science',
-    'Devops',
-    'Ux e Design',
-    'Mobile',
-    'Inovação e Gestão'
-
-  ]
-
 const [nome,setNome] = useState('')
 const [cargo,setCargo] = useState('')
 const [imagem,setImagem] = useState('')
@@ -60,7 +49,7 @@ const aoSalvar = (evento) =>{
         <ListaSuspensa 
             obrigatorio={true} 
             abel="Time" 
-            itens={times}
+            itens={props.times}
             valor={time}
             aoAlterado={valor => setTime(valor)}
         />
